@@ -29,7 +29,7 @@ body {
 
 .logo img {
   height: 40px;
-  filter: drop-shadow(0 0 10px #888);
+  filter: shadow(0 0 10px #888);
 }
 
 .logo h1 {
