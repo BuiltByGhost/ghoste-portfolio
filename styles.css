@@ -116,3 +116,29 @@ body {
 @keyframes slideUp {
   to { opacity: 1; transform: translateY(0); }
 }
+
+header img {
+  width: 80px;               /* Adjust size */
+  height: 80px;              /* Keep it proportional */
+  object-fit: cover;         /* Crops evenly inside the shape */
+  border-radius: 50%;        /* Makes it a perfect circle */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle outline */
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.4); /* Moon-like glow */
+  transition: all 0.4s ease;
+  background: radial-gradient(circle, rgba(30,30,30,0.9), rgba(0,0,0,0.7));
+}
+
+header img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px rgba(0, 200, 255, 0.6);
+  border-color: rgba(0, 200, 255, 0.8);
+}
+@keyframes moonPulse {
+  0% { box-shadow: 0 0 20px rgba(0, 150, 255, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(0, 200, 255, 0.8); }
+  100% { box-shadow: 0 0 20px rgba(0, 150, 255, 0.4); }
+}
+
+header img {
+  animation: moonPulse 3s infinite ease-in-out;
+}
