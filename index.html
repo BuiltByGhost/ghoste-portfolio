@@ -1,44 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghoste-Portfolio</title>
-    <link rel="stylesheet" href="styles.css">   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghoste | Moon Knight Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Ghoste-Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Ghoste Logo">
+      <h1>Ghoste</h1>
+    </div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>This is a brief introduction about myself.</p>
-    </section>
+  <section class="hero">
+    <h2 class="fade-in">Welcome to the Dark Side of Creativity</h2>
+    <p class="slide-up">Where code meets chaos and light meets shadow.</p>
+    <button class="glow-btn">Explore</button>
+  </section>
 
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <input type="submit" value="Submit">
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Ghoste-Portfolio. All rights reserved.</p>
-    </footer>
-    
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
