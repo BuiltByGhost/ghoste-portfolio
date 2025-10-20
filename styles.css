@@ -1,3 +1,6 @@
+/* ----------------------
+   Reset & Fonts
+------------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +12,12 @@ body {
   background-color: #0a0a0a;
   color: #e0e0e0;
   overflow-x: hidden;
+  cursor: none;
 }
 
+/* ----------------------
+   Header
+------------------------ */
 .header {
   display: flex;
   justify-content: space-between;
@@ -19,8 +26,9 @@ body {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  z-index: 2;
 }
-
 
 .logo h1 {
   font-size: 1.5rem;
@@ -51,10 +59,14 @@ body {
   width: 100%;
 }
 
+/* ----------------------
+   Hero Section
+------------------------ */
 .hero {
+  position: relative; /* above background */
+  z-index: 2;
   text-align: center;
   padding: 150px 20px;
-  background: radial-gradient(circle at center, #111 0%, #000 100%);
 }
 
 .hero h2 {
@@ -87,48 +99,31 @@ body {
   box-shadow: 0 0 40px rgba(255,255,255,0.6);
 }
 
-/* Animations */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1.5s ease-in forwards;
+/* ----------------------
+   Background Container & Overlay
+------------------------ */
+.bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/moonknight.jpeg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
 }
-
-.slide-up {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideUp 2s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-header img {
-  width: 80px;               /* Adjust size */
-  height: 80px;              /* Keep it proportional */
-  object-fit: cover;         /* Crops evenly inside the shape */
-  border-radius: 50%;        /* Makes it a perfect circle */
-  border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle outline */
-  box-shadow: 0 0 20px rgba(0, 150, 255, 0.4); /* Moon-like glow */
-  transition: all 0.4s ease;
-  background: radial-gradient(circle, rgba(30,30,30,0.9), rgba(0,0,0,0.7));
-}
-
-header img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 40px rgba(0, 200, 255, 0.6);
-  border-color: rgba(0, 200, 255, 0.8);
-}
-@keyframes moonPulse {
-  0% { box-shadow: 0 0 20px rgba(0, 150, 255, 0.4); }
-  50% { box-shadow: 0 0 40px rgba(0, 200, 255, 0.8); }
-  100% { box-shadow: 0 0 20px rgba(0, 150, 255, 0.4); }
-}
-
-header img {
-  animation: moonPulse 3s infinite ease-in-out;
+  /* behind all co*/
+  
+  .bg-container .dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  mask-image: radial-gradient(circle 150px at var(--x, 50%) var(--y, 50%), rgba(0,0,0,0) 0%, black 80%);
+  -webkit-mask-image: radial-gradient(circle 150px at var(--x, 50%) var(--y, 50%), rgba(0,0,0,0) 0%, black 80%);
+  pointer-events: none;
+  transition: background 0.05s ease-out;
 }

@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const fadeElements = document.querySelectorAll('.fade-in, .slide-up');
-  fadeElements.forEach(el => {
-    el.style.animationDelay = '0.3s';
-  });
+const overlay = document.querySelector('.dark-overlay');
+
+document.addEventListener('mousemove', e => {
+  overlay.style.setProperty('--x', `${e.clientX}px`);
+  overlay.style.setProperty('--y', `${e.clientY}px`);
 });
