@@ -1,37 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghoste Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranav | E-commerce Specialist</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Background image container -->
-  <div class="bg-container">
-    <div class="dark-overlay"></div>
+
+<header class="hero">
+  <div class="hero-content">
+    <p class="small-text">I AM</p>
+    <h1>PRANAV</h1>
+    <p class="role">E-commerce Specialist | Shopify & Performance Marketing</p>
+    <p class="status">Available for Remote Work</p>
   </div>
+</header>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">
-      <h1>Ghoste</h1>
+<section class="reveal">
+  <h2>ABOUT ME</h2>
+  <p>
+    I’m Pranav, an E-commerce Specialist currently working as a Web & Marketing Executive.
+    I manage Shopify stores end-to-end — from product setup and payment gateways to ad creatives
+    and conversion optimization. Alongside my professional role, I also build and manage my own
+    Shopify stores, gaining real-world experience with live customers and funnels.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>CORE SKILLS</h2>
+  <div class="grid">
+    <div class="card">
+      <i class="fa-solid fa-store icon"></i>
+      <h3>Shopify & E-commerce</h3>
+      <p>Store management, product optimization, checkout setup, policy compliance, theme edits.</p>
     </div>
-    <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">Portfolio</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Welcome to Ghoste</h2>
-    <p>“In the dark, I found clarity.”</p>
-    <button class="glow-btn">Explore</button>
-  </section>
+    <div class="card">
+      <i class="fa-solid fa-chart-line icon"></i>
+      <h3>Performance Marketing</h3>
+      <p>Meta Ads, audience targeting, creative testing, conversion tracking, ROAS optimization.</p>
+    </div>
 
-  <script src="script.js"></script>
+    <div class="card">
+      <i class="fa-solid fa-code icon"></i>
+      <h3>Tech & Creative</h3>
+      <p>HTML, CSS basics, Canva creatives, Figma basics, troubleshooting & automation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>EXPERIENCE</h2>
+  <div class="card">
+    <h3>Web & Marketing Executive — Beetot</h3>
+    <p>
+      Manage Shopify operations, product uploads, payment gateways, ad campaigns, creatives,
+      and conversion optimization to support online sales growth.
+    </p>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>PROJECTS</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Ednox.in</h3>
+      <p>Shopify store setup, product pages, checkout, ads & optimization.</p>
+    </div>
+    <div class="card">
+      <h3>Beetot.in</h3>
+      <p>Store management, creatives, Meta Ads, and funnel testing.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal contact">
+  <h2>CONTACT</h2>
+  <p><i class="fa-solid fa-envelope"></i> your@email.com</p>
+  <p><i class="fa-brands fa-linkedin"></i> linkedin.com/in/yourprofile</p>
+</section>
+
+<footer>
+  © 2025 Pranav — E-commerce Specialist
+</footer>
+
+<!-- Scroll Animation Script -->
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  window.addEventListener('scroll', () => {
+    reveals.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        section.classList.add('active');
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
